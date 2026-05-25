@@ -7,9 +7,9 @@ def main() -> None:
     print("=== Command Quest ===")
     print(f"Program name: {program_name}")
     if len(sys.argv) == 1:
-        print("No arguments provided")
+        print("No arguments provided!")
     else:
-        print(f"Arguments received: {nbr_arg}")
+        print(f"Arguments received: {nbr_arg - 1}")
         for i in range(1, nbr_arg):
             print(f"Argument {i}: {sys.argv[i]}")
     print(f"Total arguments: {nbr_arg}")
