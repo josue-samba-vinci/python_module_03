@@ -18,7 +18,7 @@ def main() -> None:
                     "Strategist", "Unstoppable", "Speed Runner", "Survivor",
                     "Treasure Hunter", "First Steps", "Sharp Mind",
                     "Hidden Path Finder"}
-    
+
     print("=== Achievement Tracker System ===")
 
     print()
@@ -68,7 +68,7 @@ def main() -> None:
     charlie_missing_achievements = achievements.difference(
         charlie_achievements)
     dylan_missing_achievements = achievements.difference(
-        dylan_achievements)  
+        dylan_achievements)
     print(f"Alice is missing: {alice_missing_achievements}")
     print(f"Bob is missing: {bob_missing_achievements}")
     print(f"Charlie is missing: {charlie_missing_achievements}")
