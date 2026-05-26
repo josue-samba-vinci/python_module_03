@@ -26,14 +26,15 @@ def main() -> None:
     if tuple1:
         total: int = 0
         print(f"Got a first tuple {tuple1}")
-        print(f"It includes: X={tuple1[0]}, Y={tuple1[1]}, ", end="")
-        print(f"Z={tuple1[2]}")
+        print(f"It includes: X={tuple1[0]}, Y={tuple1[1]}, "
+              f"Z={tuple1[2]}")
         total = tuple1[0]**2+tuple1[1]**2+tuple1[2]**2
         print(f"Distance to center: {math.sqrt(total):.4f}")
     print()
     print("Get a second set of coordinates")
     tuple2 = get_player_pos()
-    result = math.sqrt((tuple2[0]-tuple1[0])**2+(tuple2[1]-tuple1[1])**2+(tuple2[2]-tuple1[2])**2)
+    result = math.sqrt((tuple2[0]-tuple1[0])**2+(tuple2[1]-tuple1[1])**2 +
+                       (tuple2[2]-tuple1[2])**2)
     if tuple2:
         print(f"Distance between the 2 sets of coordinates: {result:.4f}")
 
