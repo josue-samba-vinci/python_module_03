@@ -8,7 +8,7 @@ def parse_and_store(argv: list[str]) -> list[int]:
     for i in range(1, nb_arg):
         try:
             scores.append(int(argv[i]))
-        except ValueError:
+        except Exception:
             print(f"Invalid parameter: '{argv[i]}'")
     return scores
 

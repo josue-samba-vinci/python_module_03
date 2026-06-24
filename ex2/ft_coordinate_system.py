@@ -1,16 +1,16 @@
 import math
 
 
-def get_player_pos() -> tuple[float, int, str, bool]:
+def get_player_pos() -> tuple[float, float, float]:
     while True:
         try:
             data = input("Enter new coordinates as floats in format 'x,y,z':")
             parts = data.split(',')
             if (len(parts) == 3):
-                coords = []
+                coords: list[float] = []
                 for coord in data.split(','):
                     coords.append(float(coord))
-                return tuple(coords)
+                return (coords[0], coords[1], coords[2])
             else:
                 print("Invalid syntax")
                 continue
@@ -19,12 +19,12 @@ def get_player_pos() -> tuple[float, int, str, bool]:
 
 
 def main() -> None:
-    tuple1: tuple[float, int, str, bool] = []
+    tuple1: tuple[float, float, float]
     print("=== Game Coordinate System ===")
     print("Get a first set of coordinates")
     tuple1 = get_player_pos()
     if tuple1:
-        total: int = 0
+        total: float = 0
         print(f"Got a first tuple {tuple1}")
         print(f"It includes: X={tuple1[0]}, Y={tuple1[1]}, "
               f"Z={tuple1[2]}")

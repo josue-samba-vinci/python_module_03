@@ -46,6 +46,8 @@ def main() -> None:
             min_key = rpg_dict[key]
     print(f"Item most abundant: {max_key} with quantity {max_value}")
     print(f"Item least abundant: {min_key} with quantity {min_value}")
+    rpg_dict.update({'magic_item': 1})
+    print(f"Updated inventory: {rpg_dict}")
 
 
 if __name__ == "__main__":

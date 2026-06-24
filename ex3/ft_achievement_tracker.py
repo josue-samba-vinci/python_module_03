@@ -1,13 +1,13 @@
 import random
 
 
-def gen_player_achievement() -> set[str]:
-    achievements = list[str]
-    achievements = ["Crafting Genius", "World Savior", "Master Explorer",
-                    "Collector Supreme", "Untouchable", "Boss Slayer",
-                    "Strategist", "Unstoppable", "Speed Runner", "Survivor",
-                    "Treasure Hunter", "First Steps", "Sharp Mind",
-                    "Hidden Path Finder"]
+def gen_player_achievements() -> set[str]:
+    achievements: list[str] = [
+        "Crafting Genius", "World Savior", "Master Explorer",
+        "Collector Supreme", "Untouchable", "Boss Slayer",
+        "Strategist", "Unstoppable", "Speed Runner", "Survivor",
+        "Treasure Hunter", "First Steps", "Sharp Mind",
+        "Hidden Path Finder"]
     set_achievements = set(random.sample(achievements, random.randint(0, 13)))
     return set_achievements
 
@@ -23,10 +23,10 @@ def main() -> None:
 
     print()
 
-    alice_achievements: set[str] = gen_player_achievement()
-    bob_achievements: set[str] = gen_player_achievement()
-    charlie_achievements: set[str] = gen_player_achievement()
-    dylan_achievements: set[str] = gen_player_achievement()
+    alice_achievements: set[str] = gen_player_achievements()
+    bob_achievements: set[str] = gen_player_achievements()
+    charlie_achievements: set[str] = gen_player_achievements()
+    dylan_achievements: set[str] = gen_player_achievements()
     print(f"Player Alice: {alice_achievements}")
     print(f"Player Bob: {bob_achievements}")
     print(f"Player Charlie: {charlie_achievements}")
